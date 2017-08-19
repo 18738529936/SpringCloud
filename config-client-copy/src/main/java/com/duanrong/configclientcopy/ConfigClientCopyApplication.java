@@ -1,4 +1,4 @@
-package com.duanrong.configclient;
+package com.duanrong.configclientcopy;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -8,13 +8,13 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
-@EnableEurekaClient
 @RestController
+@EnableEurekaClient
 @SpringBootApplication
-public class ConfigClientApplication {
+public class ConfigClientCopyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigClientApplication.class, args);
+		SpringApplication.run(ConfigClientCopyApplication.class, args);
 	}
 
 	@Value(value = "${foo}")
@@ -24,4 +24,5 @@ public class ConfigClientApplication {
 	public String hi() {
 		return foo;
 	}
+
 }
