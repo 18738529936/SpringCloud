@@ -1,17 +1,15 @@
 spring: 
   application:
     name: config-server
+  cloud:
+      config:
+        label: master
+        server:
+          git:
+            uri: https://github.com/18738529936/SpringCloudConfigCenter/
+            searchPaths: respo
+            username: 18738529936
+            password: zq18738529936
+
 server:
   port: 8888
-
-
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/18738529936/SpringCloudConfigCenter/
-          searchPaths: respo
-          username: 18738529936
-          password: zq18738529936
-      label: master
