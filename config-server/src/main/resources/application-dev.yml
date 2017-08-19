@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+      config:
+        label: master
+        server:
+          git:
+            uri: https://github.com/18738529936/SpringCloudConfigCenter/
+            searchPaths: respo
+            username: 18738529936
+            password: zq18738529936
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
+
